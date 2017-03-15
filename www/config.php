@@ -22,7 +22,7 @@ class Config
 			'js_dir' => '/static/js/',
 			'news_limit' => 4,
 			'SendGridAPI_key' => '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',
-			'feedback_mail' => 'zaloznyi.sasha@gmail.com'
+			'feedback_mail' => 'nasia.nana@gmail.com'
 		],
 
 		'routes' => [
