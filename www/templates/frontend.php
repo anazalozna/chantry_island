@@ -27,7 +27,7 @@
                         </div>
                         <div class="flex_item">
                             <div class="contacts_h">
-                                <a href="/page/contact"><i class="fa fa-map-marker"></i> 86 Saugeen St., Southampton, Ontario</a>
+                                <a href="/contact"><i class="fa fa-map-marker"></i> 86 Saugeen St., Southampton, Ontario</a>
                                 <a href="tel:5197975862"><i class="fa fa-phone"></i> 519-797-5862,</a> <a href="tel:18667975862"><strong>Free</strong> 1-866-797-5862</a>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                             </li>
                             <li><a href="/gallery">Gallery</a></li>
                             <li><a href="/page/donation">Donate</a></li>
-                            <li><a href="/page/contact">Contact Us</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="flex_item">
                     <h2 class="title_h2">Contact Us</h2>
-                    <p><a href="/page/contact"><i class="fa fa-map-marker"></i> 86 Saugeen St., Southampton, Ontario</a></p>
+                    <p><a href="/contact"><i class="fa fa-map-marker"></i> 86 Saugeen St., Southampton, Ontario</a></p>
                     <p><a href="tel:5197975862"><i class="fa fa-phone"></i> 519-797-5862,</a> <a href="tel:18667975862"><strong>Free</strong> 1-866-797-5862</a></p>
                 </div>
                 <div class="flex_item">
@@ -106,9 +106,8 @@
             <p>© 2017 Copyright Marine Heritage Society, Chantry Island Tours.</p>
         </div>
     </footer>
-    <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/functions.js"></script>
-    <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/classes.js"></script>
-    <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/common.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbBL9ofDwMcjTiK8gQ5tIe_DPHwsjy4wA"></script>
+    <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>frontend/functions.js"></script>
+    <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>classes.js"></script>
+    <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>frontend/common.js"></script>
 </body>
 </html>

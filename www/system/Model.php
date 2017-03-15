@@ -18,14 +18,23 @@ abstract class Model
 	 * set PDO
 	 */
 	function __construct(){
-		$dsn = 'mysql:host='.Config::get('db')['host'].';dbname='.Config::get('db')['database'].';charset=utf8';
+		if(Config::get('db')){
+            $dsn = 'mysql:host='.Config::get('db')['host'].';dbname='.Config::get('db')['database'].';charset=utf8';
+		}else{
+			$dsn = 'mysql:host='.getenv('DB_HOST').';dbname='.getenv('DB_NAME').';charset=utf8';
+
+		}
 		$opt = array(
 			PDO::ATTR_ERRMODE               => PDO::ERRMODE_EXCEPTION,
 			PDO::ATTR_DEFAULT_FETCH_MODE    => PDO::FETCH_ASSOC,
 			//PDO::MYSQL_ATTR_INIT_COMMAND    =>"SET time_zone = 'America/Toronto'",
 		);
 
-		$this->_pdo = new PDO($dsn, Config::get('db')['user'], Config::get('db')['pass'], $opt);
+		if(Config::get('db')){
+			$this->_pdo = new PDO($dsn, Config::get('db')['user'],Config::get('db')['pass'], $opt);
+		}else{
+			$this->_pdo = new PDO($dsn, getenv('DB_USER'),getenv('DB_PASS'), $opt);
+		}
 	}
 
 	/**

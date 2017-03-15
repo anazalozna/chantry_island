@@ -45,13 +45,4 @@
         </form>
     </div>
 </section>
-<script type="text/javascript">
-    document.querySelector('#users form').addEventListener('submit', function(e){
-        e.preventDefault();
-
-        let newUser = new NewUser(this);
-        newUser.validate();
-        newUser.send();
-        newUser.showErrors();
-    });
-</script>
+<script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/new_user.js"></script>

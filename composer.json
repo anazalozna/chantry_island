@@ -1,8 +1,0 @@
-{
-  "config": {
-    "vendor-dir": "www/vendor"
-  },
-  "require": {
-    "sendgrid/sendgrid": "~5.1"
-  }
-}

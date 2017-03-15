@@ -35,6 +35,18 @@
     <h2 class="hide">Call to Action</h2>
     <div class="wrapper">
         <h2 class="title_h2">Contact Us Today</h2>
-        <a class="btn_more" href="/page/contact">contact here</a>
+        <a class="btn_more" href="/contact">contact here</a>
     </div>
 </section>
+
+<script>
+    window.addEventListener("load", function(){
+        var gal_images = document.querySelectorAll(".gallery_block .gallery_box .flex_item img");
+        gal_images.forEach(function (img) {
+            img.addEventListener("click", function () {
+                var gallery = new Gallery(this);
+                gallery.openPopup();
+            });
+        });
+    });
+</script>

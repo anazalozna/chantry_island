@@ -13,7 +13,7 @@
         <?php echo $__content; ?>
 
         <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/functions.js"></script>
-        <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/classes.js"></script>
+        <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>classes.js"></script>
         <script type="text/javascript" src="<?php echo Config::get('global')['js_dir']?>backend/common.js"></script>
     </body>
 </html>

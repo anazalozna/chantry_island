@@ -22,9 +22,12 @@ class Config
 			'js_dir' => '/static/js/',
 			'news_limit' => 4,
 			'SendGridAPI_key' => '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',
+			'feedback_mail' => 'zaloznyi.sasha@gmail.com'
 		],
 
 		'routes' => [
+
+//			Backend
 			'admin' => 'user/BackendController/actionIndex',
 			'admin/login' => 'user/BackendController/actionLogin',
 			'admin/logout' => 'user/BackendController/actionLogout',
@@ -32,8 +35,21 @@ class Config
 			'admin/user/delete/(\d+)' => 'user/BackendController/actionDelete/id:$1',
 			'admin/user/add' => 'user/BackendController/actionAdd',
 			'admin/user/change' => 'user/BackendController/actionChange',
-			'404' => 'system/ErrorController/action404',
+			'admin/pages' => 'pages/BackendController/actionPages',
+			'admin/page/edit/(\d+)' => 'pages/BackendController/actionEdit/id:$1',
+			'admin/gallery' => 'pages/BackendController/actionGallery',
+			'admin/gallery/add' => 'pages/BackendController/actionAddImage',
+			'admin/gallery/edit/(\d+)' => 'pages/BackendController/actionEditImage/id:$1',
+			'admin/gallery/delete/(\d+)' => 'pages/BackendController/actionDeleteImage/id:$1',
+			'admin/news' => 'news/BackendController/actionNews',
+			'admin/news/add' => 'news/BackendController/actionAdd',
+			'admin/news/edit/(\d+)' => 'news/BackendController/actionEdit/id:$1',
+			'admin/news/delete/(\d+)' => 'news/BackendController/actionDelete/id:$1',
+
+//			Frontend
 			'' => 'pages/FrontendController/actionPage',
+			'contact' => 'pages/FrontendController/actionContact',
+			'404' => 'system/ErrorController/action404',
 			'page/([a-z-]+)' => 'pages/FrontendController/actionPage/alias:$1',
 			'gallery' => 'pages/FrontendController/actionGallery',
 			'gallery/(\d+)' => 'pages/FrontendController/actionImage/id:$1',
@@ -41,12 +57,12 @@ class Config
 			'news/(\d+)' => 'news/FrontendController/actionNews/page:$1',
 		],
 
-		'db' => [
-			'host' => 'localhost',
-			'user' => 'root',
-			'pass' => '1234',
-			'database' => 'chantry_db',
-		]
+//		'db' => [
+//			'host' => 'localhost',
+//			'user' => 'root',
+//			'pass' => '1234',
+//			'database' => 'chantry_db',
+//		]
 
 	];
 
@@ -57,7 +73,7 @@ class Config
 	 * @return array
 	 */
 	public static function get(string $name): array {
-		return self::$__data[$name];
+		return isset(self::$__data[$name]) ? self::$__data[$name] : [];
 	}
 
 	/**

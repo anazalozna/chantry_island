@@ -46,4 +46,29 @@ class FrontendController extends \Controller
 		$this->renderJson($data);
 	}
 
+	public function actionContact(){
+		$data = [
+			'sended' => False,
+			'errors' => []
+		];
+
+		if($_SERVER['REQUEST_METHOD'] == 'POST'){
+			if($_SERVER['REQUEST_METHOD'] == 'POST') {
+				$fields = ['name', 'email', 'phone', 'subject', 'message'];
+				foreach ($fields as $field) {
+					if (!isset($_POST[$field]) || !$_POST[$field]) {
+						$data['errors'][] = "$field is empty!";
+					}
+				}
+
+				if(!$data['errors']){
+					$model = \App::getInstance()->loadModel('pages/pages');
+					$model->sendMessage($_POST);
+					$data['sended'] = True;
+				}
+			}
+		}
+
+		$this->render('frontend/contact', $data);
+	}
 }

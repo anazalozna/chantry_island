@@ -34,7 +34,7 @@
     <h2 class="hide">Call to Action</h2>
     <div class="wrapper">
         <h2 class="title_h2">Contact Us Today</h2>
-        <a class="btn_more" href="/page/contact">contact here</a>
+        <a class="btn_more" href="/contact">contact here</a>
     </div>
 </section>
 <section class="news_message">
