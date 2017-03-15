@@ -57,12 +57,12 @@ class Config
 			'news/(\d+)' => 'news/FrontendController/actionNews/page:$1',
 		],
 
-//		'db' => [
-//			'host' => 'localhost',
-//			'user' => 'root',
-//			'pass' => '1234',
-//			'database' => 'chantry_db',
-//		]
+		'db' => [
+			'host' => 'localhost',
+			'user' => 'root',
+			'pass' => '1234',
+			'database' => 'chantry_db',
+		]
 
 	];
 
